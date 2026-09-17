@@ -1,4 +1,4 @@
-const ScheduledMessage = require("../models/ScheduledMessage");
+const ScheduledMessage = require("../models/scheduledMessage.model");
 
 let intervalId = null;
 let isRunning = false;

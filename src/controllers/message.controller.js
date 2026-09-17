@@ -1,4 +1,4 @@
-const ScheduledMessage = require("../models/ScheduledMessage");
+const ScheduledMessage = require("../models/scheduledMessage.model");
 
 // Validates a requested date/time and stores a message for the background scheduler.
 async function scheduleMessage(req, res, next) {

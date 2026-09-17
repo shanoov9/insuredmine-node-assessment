@@ -1,10 +1,10 @@
-const User = require("../models/User");
-const Policy = require("../models/Policy");
+const User = require("../models/user.model");
+const Policy = require("../models/policy.model");
 // Register the referenced models before Mongoose executes populate().
-require("../models/Agent");
-require("../models/UserAccount");
-require("../models/LOB");
-require("../models/Carrier");
+require("../models/agent.model");
+require("../models/userAccount.model");
+require("../models/lob.model");
+require("../models/carrier.model");
 
 // Finds users by first name and returns their policies with related data populated.
 async function getPoliciesByUsername(req, res, next) {
