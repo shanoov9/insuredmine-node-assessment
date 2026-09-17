@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "InsuredMine Node.js Assessment",
+    "_postman_id": "9c0e3db2-3a5d-4f7c-bf7f-3c7b6e8e4c21",
+    "description": "Postman collection for the technical assessment APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Search Policies By User",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/policies/user/Lura%20Lucca"
+      }
+    },
+    {
+      "name": "Aggregate Policies By User",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/policies/aggregate"
+      }
+    },
+    {
+      "name": "Schedule Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Policy renewal reminder\",\n  \"day\": \"2026-09-20\",\n  \"time\": \"10:30\"\n}"
+        },
+        "url": "{{baseUrl}}/api/messages/schedule"
+      }
+    }
+  ]
+}
